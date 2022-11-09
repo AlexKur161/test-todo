@@ -7,7 +7,7 @@ export default new Router({
     mode:'history',
     routes:[
         {
-        path:'/',
+        path:'/test-todo/',
         component: Home
          },
          {
