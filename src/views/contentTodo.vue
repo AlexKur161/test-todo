@@ -4,7 +4,7 @@
     <div class="change-content">
     <p v-if="showTitle" class="title-task">{{filt.title}}</p>
     <textarea type="text" v-else-if="!showTitle" v-model="filt.title" class="title-task-inp" />
-    <button class="btn-showinp" @click="test">&#9998;</button>
+    <button class="btn-showinp" @click="editValue">&#9998;</button>
     </div>
     </div>
 </template>
@@ -18,8 +18,7 @@ export default {
             todosNew:[],
             filt:"",
             deleteItem: "",
-            showTitle:true,
-            test: ""
+            showTitle:true
         }
     },
     mounted(){
@@ -37,7 +36,7 @@ export default {
         }
      },
      methods:{
-      test(){
+      editValue(){
         this.showTitle = !this.showTitle
         const tt = this.todosNew.findIndex(numb => numb.id == this.filt.id)
         this.todosNew[tt] = this.filt

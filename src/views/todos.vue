@@ -1,6 +1,6 @@
 <template>
   <div class="bord-select" @click="selected = false">
-    <router-link class="link-router" to="/">Главная</router-link>
+    <router-link class="link-router" to="/test-todo/">Главная</router-link>
     <addTodo 
     v-bind:todos="todos"
     @sub-item="subItem"
